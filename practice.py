@@ -10,4 +10,4 @@ while number >= 1 and number <= 1000 and number * times <= upper_limit:
 	times = int(times + 1)
 if number * times >= upper_limit:
 	print("Thanks for using my program!")
-	print("There are " + str(times) + " integer multiples of " + str(number) + " that are less than " + str(upper_limit) + ".")
+	print("There are " + str(times - 1) + " integer multiples of " + str(number) + " that are less than " + str(upper_limit) + ".")
