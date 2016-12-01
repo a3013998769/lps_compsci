@@ -1,0 +1,23 @@
+print("Welcome to my guessing game. In this game, you're going to guess the number between 1 and 1000.")
+import random
+correct_number = random.randint(1,1000)
+chance = True
+times = 0
+score = 0
+while chance == True:
+  print("You can guess the unknown number.")
+  answer = int(input())
+  if answer == correct_number:
+    times = times + 1
+    chance = False
+    score = 20 - times 
+    if score < 1:
+      score = 1
+    print("Good. You've guessed the correct number! Your score is " + str(score) + " because you guessed the correct number by " + str(times) + " times.")
+  if answer > correct_number:
+    print("Your answer is larger than the correct answer. Try again.")
+    times = times + 1
+  if answer < correct_number:
+    print("Your answer is lower than the correct answer. Try again.")
+    times = times + 1
+  
