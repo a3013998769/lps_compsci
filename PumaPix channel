@@ -1,0 +1,43 @@
+print("Thanks for ordering your new channel PumaPix. We need to know what kinds of show are your favorites. Please tell us at least 5 your favorite shows.") 
+#The code above are the prints. This introduces the program.
+
+times = 5
+chance = False
+shows = []
+#Set the original values of each variables.
+  
+while times > 0:
+  print("What's one of your favorite show?")
+  favorite = input()
+  shows.append(str(favorite))
+  times = times - 1
+#Ask users for at least 5 of their favorite shows.  
+  
+if times <= 0:
+  print("Do you still have favorite shows? (yes/no)")
+  answer = input()
+  if answer == "yes":
+    chance = True
+    while chance == True: 
+      print("What's one of your favorite show?")
+      favorite = input()
+      shows.append(favorite)
+      print("Do you want to continue? (yes/no)")
+      answer2 = input()
+      if answer2 == "yes":
+        chance = True
+      else:
+        chance = False
+        answer = "no"
+#This code will keep asking users for their extra favorite shows.        
+        
+  if answer == "no":
+    print(shows)
+#This loop will be terminated if the user enters "no".
+    
+print("We've made a list for your favorite shows. Enjoy your life time.")
+for list_of_shows in shows:
+  print(list_of_shows)
+print("Man VS Wild")
+print("CNN news")
+#Add two more shows.
