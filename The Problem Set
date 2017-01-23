@@ -1,0 +1,114 @@
+# shapeDrawer.py
+# draws user-input shapes in random places on the screen
+# with random sizes and colors
+ 
+# bring in the packages of functions we need
+import random
+import turtle
+import time
+ 
+# -------- functions start here ----------------
+ 
+def regular_triangle(myTurtle, x, y, side, myColor):
+        myTurtle.color #Changing the color every times
+        myTurtle.penup() #The turtle won't have prints
+        myTurtle.goto(x,y) #Going to anywhere
+        myTurtle.pendown() #The turtle will have prints
+        side_count = 0 #Create a value for the loop
+        while side_count < 3: #Create a loop to draw the triangle
+                myTurtle.forward(side)
+                myTurtle.right(120)
+                side_count = side_count + 1 
+ 
+def regular_square(myTurtle, x, y, side, myColor):
+            myTurtle.color(myColor) #Changing the color every times
+            myTurtle.penup() #The turtle won't have prints
+            myTurtle.goto(x,y) #Going to anywhere
+            myTurtle.pendown() #The turtle will have prints
+            side_count = 0 #Create a value for the loop
+            while side_count < 4: #Create a loop to draw a square
+              myTurtle.forward(side)
+              myTurtle.left(90)
+              side_count = side_count + 1
+ 
+def regular_pentagon(myTurtle, x, y, side, myColor):
+        myTurtle.color(myColor) #Changing the color every times
+        myTurtle.penup() #The turtle won't have prints
+        myTurtle.goto(x,y)#Going to anywhere
+        myTurtle.pendown()#The turtle will have prints
+        side_count = 0 #Create a value for the loop
+        while side_count < 5: #Create a loop to draw a petagon
+            myTurtle.forward(side)
+            myTurtle.left(72)
+            side_count = side_count + 1
+ 
+def regular_hexagon(myTurtle, x, y, side, myColor):
+        myTurtle.color(myColor) #Changing the color every times
+        myTurtle.penup() #The turtle won't have prints
+        myTurtle.goto(x,y) #Going to anywhere
+        myTurtle.pendown() #The turtle will have prints
+        side_count = 0 #Create a value for the loop
+        while side_count < 6: #Create a loop to draw a hexagon
+            myTurtle.forward(side)
+            myTurtle.left(60)
+            side_count = side_count + 1
+            
+def regular_octagon(myTurtle, x, y, side, myColor):
+        myTurtle.color(myColor) #Changing the color every times
+        myTurtle.penup() #The turtle won't have prints
+        myTurtle.goto(x,y) #Going to anywhere
+        myTurtle.pendown() #The turtle will have prints
+        side_count = 0 #Create a value for the loop
+        while side_count < 8: #Create a loop to draw a octagon
+            myTurtle.forward(side)
+            myTurtle.left(45)
+            side_count = side_count + 1
+            
+def circle(myTurtle, x, y, radius, myColor):
+        myTurtle.color(myColor) #Changing the color every times
+        myTurtle.penup() #The turtle won't have prints
+        myTurtle.goto(x,y) #Going to anywhere
+        myTurtle.pendown() #The turtle will have prints
+        side_count = 0 #Create a value for the loop
+        while side_count < 360: #Create a loop to draw a circle
+            myTurtle.forward(radius * 3.14 / 360) #Use radius to draw the circle
+            myTurtle.left (1) #The angle of circle is 360
+            side_count = side_count + 1
+# -------- execution starts here ----------------
+ 
+print("Welcome to the random shape drawer!")
+print("You choose the shapes, and we choose the position, color, and size.")
+ 
+squirt = turtle.Turtle()
+
+# write a message to the screen
+# the arguments after the string set where & how it's written
+squirt.write("Enter a shape!\nWhen you're done, enter 'exit'.", False, "center", ("Arial", 12,"normal"))
+squirt.backward(1)
+
+# wait a moment for the user to read
+time.sleep(300)
+
+ 
+shape = ""
+while shape != "exit":
+        shape = input()
+ 
+        randx = random.randint(-200,200)
+        randy = random.randint(-200,200)
+        randside = random.randint(5,100)
+        colorlist = ["red", "blue", "green", "yellow", "purple", "orange"]
+        color = colorlist[random.randint(0,5)]
+        
+        if shape == 'triangle':
+                regular_triangle(squirt, randx, randy, randside, color)
+        elif shape == 'square':
+                regular_square(squirt, randx, randy, randside, color)
+        elif shape == 'pentagon':
+                regular_pentagon(squirt, randx, randy, randside, color)
+        elif shape == 'hexagon':
+                regular_hexagon(squirt, randx, randy, randside, color)
+        elif shape == 'octagon':
+                regular_octagon(squirt, randx, randy, randside, color)
+        elif shape == 'circle':
+                circle(squirt, randx, randy, randside, color)
