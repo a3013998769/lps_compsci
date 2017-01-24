@@ -1,0 +1,74 @@
+import turtle
+
+def fourcubes(myTurtle):
+  myTurtle.speed(10)
+  count = 0
+  while count < 4:
+    myTurtle.fillcolor("blue")
+    myTurtle.begin_fill()
+    myTurtle.forward(50)
+    myTurtle.right(60)
+    myTurtle.forward(50)
+    myTurtle.right(120)
+    myTurtle.forward(50)
+    myTurtle.right(60)
+    myTurtle.forward(50)      
+    myTurtle.end_fill()
+    myTurtle.fillcolor("green")
+    myTurtle.begin_fill()
+    myTurtle.left(120)
+    myTurtle.forward(50)
+    myTurtle.left(60)
+    myTurtle.forward(50)
+    myTurtle.left(120)
+    myTurtle.forward(50)
+    myTurtle.end_fill()
+    myTurtle.fillcolor("purple")
+    myTurtle.begin_fill()
+    myTurtle.right(60)
+    myTurtle.forward(50)
+    myTurtle.right(120)
+    myTurtle.forward(50)
+    myTurtle.right(60)
+    myTurtle.forward(50)
+    myTurtle.left(180)
+    myTurtle.end_fill()
+    count = count + 1
+
+def cubeloop(myTurtle):
+  fourcubes(myTurtle)
+  myTurtle.penup()
+  myTurtle.left(120)
+  myTurtle.forward(50)
+  myTurtle.right(60)
+  myTurtle.forward(50)
+  myTurtle.left(60)
+  myTurtle.forward(50)
+  myTurtle.right(60)
+  myTurtle.forward(50)
+  myTurtle.left(60)
+  myTurtle.forward(50)
+  myTurtle.right(60)
+  myTurtle.forward(50)
+  myTurtle.left(60)
+  myTurtle.forward(50)
+  myTurtle.right(60)
+  myTurtle.forward(50)
+  myTurtle.left(60)
+  myTurtle.forward(50)
+  myTurtle.left(60)
+  myTurtle.forward(50)
+  myTurtle.right(180)
+  myTurtle.pendown()
+    
+def ikisugi(myTurtle):
+  count2 = 0
+  while count2 < 4:
+    cubeloop(myTurtle)
+    count2 = count2 + 1
+    
+    
+soudayo = turtle.Turtle()  
+soudayo.goto(-40,40)
+soudayo.left(30)
+ikisugi(soudayo)
