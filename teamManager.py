@@ -53,4 +53,4 @@ while loop == True:
     print("The average of teammates' goals is " + str(averagegoals) + ".") #calculate the average number of goals and print it.
   if answer == 4:
     averageages = agesamount / agesnumber
-    print("The average of teammates' goals is " + str(averageages) + ".") #calculate  the average number of ages and print it. 
+    print("The average of teammates' ages is " + str(averageages) + ".") #calculate  the average number of ages and print it. 
