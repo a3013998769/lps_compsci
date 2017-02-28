@@ -1,11 +1,11 @@
-import turtle
+import turtle #Create the turtle
 
-def fourcubes(myTurtle):
-  myTurtle.speed(10)
-  count = 0
+def fourcubes(myTurtle): #Create a method to draw the cubes 
+  myTurtle.speed(10) #Set the speed of turtle
+  count = 0 #Set the count for the loop
   while count < 4:
-    myTurtle.fillcolor("blue")
-    myTurtle.begin_fill()
+    myTurtle.fillcolor("blue") #Changing the color for every surface of the cubes
+    myTurtle.begin_fill() #Start filling the cubes with chosed color
     myTurtle.forward(50)
     myTurtle.right(60)
     myTurtle.forward(50)
@@ -13,8 +13,8 @@ def fourcubes(myTurtle):
     myTurtle.forward(50)
     myTurtle.right(60)
     myTurtle.forward(50)      
-    myTurtle.end_fill()
-    myTurtle.fillcolor("green")
+    myTurtle.end_fill()  
+    myTurtle.fillcolor("green") #As same as line 7
     myTurtle.begin_fill()
     myTurtle.left(120)
     myTurtle.forward(50)
@@ -23,7 +23,7 @@ def fourcubes(myTurtle):
     myTurtle.left(120)
     myTurtle.forward(50)
     myTurtle.end_fill()
-    myTurtle.fillcolor("purple")
+    myTurtle.fillcolor("purple") #As same as line 17
     myTurtle.begin_fill()
     myTurtle.right(60)
     myTurtle.forward(50)
@@ -33,11 +33,11 @@ def fourcubes(myTurtle):
     myTurtle.forward(50)
     myTurtle.left(180)
     myTurtle.end_fill()
-    count = count + 1
+    count = count + 1 #The count will add 1 every time when the turtlr finish drawing one surface
 
-def cubeloop(myTurtle):
+def cubeloop(myTurtle): #This loop is for drawing the columns of cubes
   fourcubes(myTurtle)
-  myTurtle.penup()
+  myTurtle.penup() 
   myTurtle.left(120)
   myTurtle.forward(50)
   myTurtle.right(60)
@@ -59,9 +59,9 @@ def cubeloop(myTurtle):
   myTurtle.left(60)
   myTurtle.forward(50)
   myTurtle.right(180)
-  myTurtle.pendown()
+  myTurtle.pendown() #Finishing draw a column contains 4 cubes
     
-def ikisugi(myTurtle):
+def ikisugi(myTurtle): #Repeat the method cubeloop to draw the columns of cubes
   count2 = 0
   while count2 < 4:
     cubeloop(myTurtle)
@@ -71,4 +71,4 @@ def ikisugi(myTurtle):
 soudayo = turtle.Turtle()  
 soudayo.goto(-40,40)
 soudayo.left(30)
-ikisugi(soudayo)
+ikisugi(soudayo) #Starting drawing by the methods
