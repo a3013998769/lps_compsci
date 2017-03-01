@@ -21,7 +21,7 @@ agesnumber = 0 #calculate the amount of the number of ages
 while loop == True:
   print("Welcome to the teamManagerDeluxe! Which performance do you want to use?") #The new things of the Deluxe version. I added two more options.
   print("(1)I want to start a new team.")
-  Print("(2)I want to open a file with an existing team.")
+  print("(2)I want to open a file with an existing team.")
   answer1 = int(input())
   
   if answer == 1:
