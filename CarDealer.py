@@ -27,13 +27,11 @@ def printAds(carList):
 # note that you can pass a list and that the things you add to it will be there after calling this function
 # this isn't true in every language!!
 def loadCars(carList, filename):
-    x = open(filename, "a")
-    
-    for cars in carList:
-        y = x.readline()
-        desc = y.split(' ')
-        carList.append(Car(desc[0], desc[1], desc[2], desc[3]))
- 
+    x = open(filename, "r")
+    y = x.readline()
+    desc = y.split(' ')
+    carList.append(Car(desc[0], desc[1], desc[2], desc[3]))
+        
     x.close()
  
  
