@@ -29,7 +29,7 @@ def printAds(carList):
 def loadCars(carList, filename):
     x = open(filename, "a")
     
-    for cars in carLIst:
+    for cars in carList:
         y = x.readline()
         desc = y.split(' ')
         carList.append(Car(desc[0], desc[1], desc[2], desc[3]))
