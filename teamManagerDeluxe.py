@@ -16,10 +16,20 @@ class Player(object): #create the class
   def getstats(self): #create the method of getting the summary of the new teammate
     stats = ("This is one player's name, age, goals, and position:" + str(self.name) + " " + str(self.age) + " " + str(self.goals) + " " + str(self.position) + "\n")
     return stats
+    
   def getstringout(self, filename):
-    x = open(filename, "a")
-    x.write(str(self.name) + " " + str(self.age) + " " +str(self.goals) + " " + str(self.position) + " " +"\n") 
+    o = open("store.txt","w")
+    x = open(filename, "r")
+    r = x.read()
+    o.write(r)
+    o.write(str(self.name) + " " + str(self.age) + " " +str(self.goals) + " " + str(self.position) + " " +"\n") 
+    o.close()
+    f = open("store.txt","r")
+    z = f.read()
     x.close()
+    y = open(filename, "w")
+    y.write(z)
+    y.close()
 loop = True #Create a loop
 myplayers = [] #Create a list of myplayers
 goalsamount = 0 #Calculate the amount of goals
@@ -123,8 +133,8 @@ if choice == 2:
     if answer == 4:
       averageages = agesamount / agesnumber
       print("The average of teammates' ages is " + str(averageages) + ".") #calculate  the average number of ages and print it. 
-      print("What's your file's name?")
     if answer == 5:  
+      print("What's your file's name?")
       filename = raw_input()
       for myplayer in myplayers: #Storing to the file you choose
         myplayer.getstringout(filename)
