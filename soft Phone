@@ -1,0 +1,25 @@
+Phonenumbers = {}
+
+print("Welcome to the Phone program. What would you like to do?")
+loop = True
+while loop == True:
+    print("(1) Add a phone number.")
+    print("(2) Print the full list of contacts.")
+    print("(3) Enter a name to retrieve that contact's phone number.")
+    print("(0) Exit the Contacts app.")
+    choose = int(raw_input())
+    if choose == 1:
+        print("What's the phone's user's name?")
+        answer1 = str(raw_input())
+        print("What's the phone's number?")
+        answer2 = str(raw_input())
+        Phonenumbers[answer1] = str(answer2)
+    if choose == 2:
+        for person in Phonenumbers:
+            print(person + ' has the phone number which is ' + Phonenumbers[person])
+    if choose == 3:
+        print("Which name do you want to choose?")
+        name = raw_input()
+        print(str(name) + ' has the phonenumber which is ' + Phonenumbers[name])
+    if choose == 0:
+        loop = False    
