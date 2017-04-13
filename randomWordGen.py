@@ -13,9 +13,9 @@ choose = str(raw_input())
 if choose == "y":
     loop = True
     while loop == True:
-        print("Which number would you like to choose for the lowest number?")
+        print("Which number would you w=like to choose as the lowest number?")
         answer1 = int(raw_input())
-        print("Which number would you like to choose for the highest number?")
+        print("Which number would you like to choose as the highest number?")
         answer2 = int(raw_input())
         print("OK. Here it is.")
         import random
